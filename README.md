@@ -14,6 +14,14 @@ Features and ideas for improvement:
 - [x] Support for rich text formatting
 - [x] Characters count on the bottom
 - [ ] Highlight current line
-- [ ] Basic syntax highlight
+- [ ] Button to lock changes (toggles `contenteditable` on editor)
+- [ ] Store more info in the url as json (last modified date, lock status, etc)
+- [ ] Basic syntax highlight (or switch to a 3rd party embedded editor)
+- [ ] Prepare minified `dist` directory with optimal performance
+
+
+
+
+
 
 <img src="./assets/screenshots/screenshot.png" />
