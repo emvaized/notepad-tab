@@ -43,7 +43,7 @@ function setLineNumbers(){
 
     const nodes = textarea.childNodes;
     for(let i = 0, n = nodes.length; i < n; i++){
-        const count = document.createElement('span');
+        const count = document.createElement('div');
 
         count.style.position = 'absolute';
         count.style.top = nodes[i].offsetTop + 'px';

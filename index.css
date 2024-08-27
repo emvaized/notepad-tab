@@ -50,7 +50,7 @@ div button{
     background: background; 
     border-radius: 4px;
     border: 1px solid lightgray;
-    width: 100%; height: fit-content; min-height:100%;
+    width: 100%; height: fit-content;
 }
 
 .editor:has(:focus){
@@ -63,10 +63,10 @@ border: 1px solid AccentColor;
     transform: translate(-40px);
     position: absolute;
 }
-.numbers span {
+.numbers div {
     counter-increment: linenumber;
 }
-.numbers span::before {
+.numbers div::before {
     content: counter(linenumber);
     display: block;
     color: lightgrey;
