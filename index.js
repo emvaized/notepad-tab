@@ -14,6 +14,7 @@ if (window.location.hash) {
     const prevText = decodeURI(window.location.hash.slice(1));
     textarea.innerHTML = prevText;
     onInput(prevText);
+    moveCursorToEnd(textarea);
 }
 
 function onInput(text){
@@ -54,4 +55,13 @@ function setLineNumbers(){
         // }
         numbers.appendChild(count);
     }
+}
+
+function moveCursorToEnd(input) {
+    const range = document.createRange();
+    const selection = window.getSelection();
+    range.setStart(input, input.childNodes.length);
+    range.collapse(true);
+    selection.removeAllRanges();
+    selection.addRange(range);
 }
