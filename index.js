@@ -26,6 +26,14 @@ function onInput(text){
     }, 1)
 }
 
+/// Tab key handler
+textarea.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+        e.preventDefault();
+        document.execCommand('insertHTML', false, '&nbsp;&nbsp;&nbsp;&nbsp;')
+    }
+});
+
 function onAddLink(){
     const prompt = window.prompt('Enter URL, or empty to remove any link');
     if(prompt){
