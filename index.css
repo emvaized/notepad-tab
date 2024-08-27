@@ -19,7 +19,7 @@ hr{
     /* padding: 12px; */
     /* border: 1px solid lightgray; */
     outline: none;
-    padding: 0 12px;
+    padding: 0 8px;
     position: relative;
 }
     
@@ -54,7 +54,7 @@ div button{
 }
 
 .editor:has(:focus){
-border: 1px solid AccentColor;
+    border: 1px solid AccentColor;
 }
 
 .numbers {
