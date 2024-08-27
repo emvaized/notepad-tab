@@ -1,0 +1,77 @@
+body {
+    margin: 10%;
+    font-family: sans-serif;
+}
+
+hr{
+    opacity:.2
+}
+
+.textarea{
+    line-height: 21px;
+    overflow-y: hidden;
+    resize: none;
+    background: background;
+    border-radius: 4px;
+    width: 100%;
+    height: fit-content;
+    min-height: 150px;
+    /* padding: 12px; */
+    /* border: 1px solid lightgray; */
+    outline: none;
+    padding: 0 12px;
+    position: relative;
+}
+    
+.counter{
+    opacity: .25;
+    text-align: end;
+    padding: 8px
+}
+
+div button{
+    vertical-align: bottom;
+}
+
+.buttons-container{
+    margin-bottom:8px;text-align:end
+}
+
+.buttons-container img {
+    height: 16px;
+    width: 16px;
+}
+
+.editor {
+    display: inline-flex;
+    gap: 10px;
+    line-height: 21px;
+    padding: 8px;
+    background: background; 
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    width: 100%; height: fit-content; min-height:100%;
+}
+
+.editor:has(:focus){
+border: 1px solid AccentColor;
+}
+
+.numbers {
+    width: 20px;
+    text-align: right;
+    transform: translate(-40px);
+    position: absolute;
+}
+.numbers span {
+    counter-increment: linenumber;
+}
+.numbers span::before {
+    content: counter(linenumber);
+    display: block;
+    color: lightgrey;
+}
+
+.textarea > div:has(:focus){
+    background: rgba(0,0,0,0.1) !important;
+}

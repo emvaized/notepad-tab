@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Empty note</title>
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+        <link rel="stylesheet" href="./index.css" />   
+    </head>
+    <body>
+        <div class="buttons-container">
+            <!-- <button onclick="execCommand('hiliteColor','','rgba(256,0,0,0.1)')" title="Marker"><img src="./assets/icons/marker.svg" /></button> -->
+            <button onclick="onAddLink()" title="Add link"><img src="./assets/icons/add-link.svg" /></button>
+            <button onclick="execCommand('insertOrderedList')" title="Ordered list">
+                <img src="./assets/icons/ordered-list.svg" /></button>
+            <button onclick="execCommand('insertUnorderedList')" title="Unordered list">
+                <img src="./assets/icons/unordered-list.svg"/></button>
+            <button onclick="execCommand('insertHorizontalRule')" title="Add separator">
+                <img src="./assets/icons/add-divider.svg"/></button>
+            <span style="margin-right:10px"></span>
+            <button onclick="execCommand('bold')" style="font-style:bold" title="Bold">B</button>
+            <button onclick="execCommand('italic')" style="font-style:italic" title="Italic">I</button>
+            <button onclick="execCommand('underline')" style="text-decoration:underline" title="Underline">U</button>
+            <button onclick="execCommand('strikethrough')" style="text-decoration:line-through" title="Strike-through">S</button>
+        </div>
+
+        <!-- <div contenteditable class="textarea" cols="30" rows="10" autofocus></div> -->
+        <div class="editor">
+            <div class="numbers">
+              <span></span>
+            </div>
+            <div contenteditable class="textarea" cols="30" rows="10" autofocus></div>
+        </div>
+        <div class="counter"></div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
+    
