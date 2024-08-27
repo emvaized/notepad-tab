@@ -1,4 +1,4 @@
-## Note tab
+## Notepad tab
 
 Basic notepad for your browser. 
 Just open a new tab and paste the following url: https://emvaized.github.io/notepad-tab/#Hello
@@ -8,3 +8,5 @@ All text you input will be stored in the url of your tab, and restored on browse
 The first line of your note will also become the tab title. Changes are saved with a delay of 1 second, in order to not span browser history so much.
 
 If anything happens to the server, you can always recover your note by copying part of the url after the `#` sign and open it in a new tab, prepending 'data:text/html,' in the beginning. It's just plain html text.
+
+<img src="./assets/screenshots/screenshot.png" />
