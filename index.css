@@ -73,3 +73,7 @@ div button{
     display: block;
     color: lightgrey;
 }
+
+.textarea img {
+    max-width: 100%;
+}
