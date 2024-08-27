@@ -63,15 +63,13 @@ div button{
     transform: translate(-40px);
     position: absolute;
 }
+
 .numbers div {
     counter-increment: linenumber;
 }
+
 .numbers div::before {
     content: counter(linenumber);
     display: block;
     color: lightgrey;
-}
-
-.textarea > div:has(:focus){
-    background: rgba(0,0,0,0.1) !important;
 }
