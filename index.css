@@ -64,6 +64,7 @@ div button{
 
 .numbers div {
     counter-increment: linenumber;
+    left:0;
 }
 
 .numbers div::before {

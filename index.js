@@ -37,13 +37,12 @@ function onAddLink(){
 
 function setLineNumbers(){
     numbers.innerHTML = '';
-    const nodes = textarea.childNodes;
+    // const nodes = textarea.childNodes;
+    const nodes = document.querySelectorAll('.textarea > div');
     for(let i = 0, n = nodes.length; i < n; i++){
         const count = document.createElement('div');
-
         count.style.position = 'absolute';
         count.style.top = nodes[i].offsetTop + 'px';
-        count.style.right = '0px';
         numbers.appendChild(count);
     }
 }
