@@ -72,3 +72,10 @@ document.addEventListener('mousedown',function(e){
         }
     }
 })
+
+/// Save on image resize
+document.addEventListener('mouseup',function(e){
+    if (e.target.firstChild && e.target.firstChild.tagName == 'IMG'){
+        onInput(textarea.innerHTML);
+    }
+})

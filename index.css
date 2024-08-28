@@ -76,3 +76,8 @@ div button{
 .textarea img {
     max-width: 100%;
 }
+
+.editor:has(:focus) .textarea div:has(img) {
+    resize: both;
+    overflow: hidden;
+}
