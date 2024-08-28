@@ -73,3 +73,11 @@ function moveCursorToEnd(input) {
     selection.removeAllRanges();
     selection.addRange(range);
 }
+
+document.addEventListener('mousedown',function(e){
+    if (e.shiftKey || e.altKey){
+        if (e.target.href){
+            window.open(e.target.href, '_blank')
+        }
+    }
+})
