@@ -26,14 +26,6 @@ function onInput(text){
     }, 1)
 }
 
-/// Tab key handler
-textarea.addEventListener("keydown", (e) => {
-    if (e.key === "Tab") {
-        e.preventDefault();
-        document.execCommand('insertHTML', false, '&nbsp;&nbsp;&nbsp;&nbsp;')
-    }
-});
-
 function onAddLink(){
     const prompt = window.prompt('Enter URL, or empty to remove any link');
     if(prompt){
@@ -44,11 +36,7 @@ function onAddLink(){
 }
 
 function setLineNumbers(){
-    // const num = textarea.innerHTML.split("<br>").length;
-    // const num = textarea.childNodes.length;
-    // numbers.innerHTML = Array(num).fill("<span></span>").join("");
     numbers.innerHTML = '';
-
     const nodes = textarea.childNodes;
     for(let i = 0, n = nodes.length; i < n; i++){
         const count = document.createElement('div');
@@ -56,11 +44,6 @@ function setLineNumbers(){
         count.style.position = 'absolute';
         count.style.top = nodes[i].offsetTop + 'px';
         count.style.right = '0px';
-        // count.innerText = i;
-
-        // count.onclick = function(){
-        //     nodes[i].focus()
-        // }
         numbers.appendChild(count);
     }
 }
@@ -74,6 +57,15 @@ function moveCursorToEnd(input) {
     selection.addRange(range);
 }
 
+/// Tab key handler
+textarea.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+        e.preventDefault();
+        document.execCommand('insertHTML', false, '&nbsp;&nbsp;&nbsp;&nbsp;')
+    }
+});
+
+/// Link click
 document.addEventListener('mousedown',function(e){
     if (e.shiftKey || e.altKey){
         if (e.target.href){
